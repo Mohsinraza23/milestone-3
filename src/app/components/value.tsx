@@ -2,17 +2,20 @@ import Image from 'next/image';
 
 export default function ValuesSection() {
   return (
-    <section className="min-h-screen">
+    <section className="min-h-screen bg-black bg-opacity-80 flex items-center justify-center">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center py-12 lg:py-24">
           {/* Image Section */}
-          <div className="relative aspect-square lg:aspect-[4/3]">
+          <div className="relative w-full h-auto">
             <Image
               src="/mo.png"
               alt="Luxury perfume bottle with citrus and herbs"
-              width={900} // Image width
-              height={900} // Image height
-              className="object-cover w-full h-full rounded-lg shadow-2xl"
+              layout="responsive"
+              width={1920} 
+              height={1080}
+              objectFit="contain" 
+              className="rounded-lg shadow-2xl"
+              priority 
             />
           </div>
 
@@ -46,6 +49,3 @@ export default function ValuesSection() {
     </section>
   );
 }
-
-  
-  

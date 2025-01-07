@@ -22,8 +22,8 @@ export default function Hero() {
           <Image
             src="/1perfume.png"
             alt="Luxury perfume bottle with glowing amber liquid"
-            width={600} // Adjust the width as needed
-            height={600} // Adjust the height as needed
+            width={600} 
+            height={600} 
             className="object-contain"
           />
         </div>

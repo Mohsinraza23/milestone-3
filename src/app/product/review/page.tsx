@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function ReviewsPage() {
   const reviews = [
     {
@@ -24,7 +26,7 @@ export default function ReviewsPage() {
       content: "I tried a sample and fell in love with this fragrance so I had to buy my first bottle. This fragrance is my treat for me. It helps to create a good mood. During a stressful day really nice to stop a few moments and revisit the scent from my wrists. I really love the fact that it doesn't take the air out of the room. Some scents are so overbearing but not this one. Try it you just might really love it.",
       avatar: "/placeholder.svg?height=40&width=40"
     }
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -40,8 +42,8 @@ export default function ReviewsPage() {
                 <div key={stars} className="flex items-center gap-2">
                   <span className="w-12 text-sm">{stars} stars</span>
                   <div className="h-2 flex-1 rounded-full bg-gray-800">
-                    <div 
-                      className="h-full rounded-full bg-amber-500" 
+                    <div
+                      className="h-full rounded-full bg-amber-500"
                       style={{ width: stars === 5 ? '100%' : '0%' }}
                     />
                   </div>
@@ -84,10 +86,12 @@ export default function ReviewsPage() {
             {reviews.map((review) => (
               <div key={review.id} className="border-b border-gray-800 pb-8">
                 <div className="flex items-start gap-4">
-                  <img
+                  <Image
                     src={review.avatar}
                     alt={`${review.author}'s avatar`}
                     className="h-10 w-10 rounded-full"
+                    width={40}
+                    height={40}
                   />
                   <div className="flex-1">
                     <div className="flex mb-2">
@@ -122,6 +126,5 @@ export default function ReviewsPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

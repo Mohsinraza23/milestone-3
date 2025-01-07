@@ -17,8 +17,8 @@ export default function SaleBanner() {
         <Image
           src="/b1.png"
           alt="banner"
-          width={1000} // Set the width
-          height={300} // Set the height
+          width={1000}
+          height={300} 
           className={`transition-all duration-300 ${
             hovered ? 'filter brightness-125' : ''
           }`}
